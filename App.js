@@ -1,12 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import 'react-native-gesture-handler';  
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { createStackNavigator } from '@react-navigation/stack';
+
 
 export default function App() {
+  const Stack= createStackNavigator();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack.Navigator>
+    <Stack.Screen name='Login' component={Login}/>
+    <Stack.Screen name='Cadastro' component={SignUp}/>
+    <Stack.Screen options={{headerShown:false}} name='HomeTab' component={HomeTabs}/>
+    
+
+
+
+
+  </Stack.Navigator>
+
+
+
   );
 }
 
