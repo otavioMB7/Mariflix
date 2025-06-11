@@ -21,17 +21,18 @@ export default function Login({navigation}) {
         });
     }
     return (
-        <View style={styles.tudo}>
-            <Text style={styles.title}>Login JuniorFit GYM</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Login MariFlix</Text>
 
-            <View style={styles.inputs}>
-                <TextInput style={styles.input}
+            <View style={styles.inputContainer}>
+                <TextInput
+                    style={styles.input}
                     placeholder="Login"
                     value={email}
                     onChangeText={setEmail}
-
                 />
-                <TextInput style={styles.input}
+                <TextInput
+                    style={styles.input}
                     placeholder="Senha"
                     value={senha}
                     onChangeText={setSenha}
@@ -41,64 +42,53 @@ export default function Login({navigation}) {
             <Button
                 title="Entrar"
                 onPress={VerificaUser}
-                
             />
-{/*             <Button
-                title="Cadastre-se"
-                onPress={() => navigation.navigate('Cadastro')}
-            /> */}
             <TouchableOpacity>
-                <Text style={styles.texto2} onPress={() => navigation.navigate('Cadastro')}>Cadastre-se</Text>
+                <Text style={styles.registerText} onPress={() => navigation.navigate('Cadastro')}>Cadastre-se</Text>
             </TouchableOpacity>
-            <Text style={styles.creditos}>Maior academia de Criciúma e região;</Text>
+            <Text style={styles.footerText}>O palco das suas críticas cinematográficas</Text>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
-    tudo: {
+    container: {
         flex: 1,
-        backgroundColor: 'orange',
-        padding: '50px',
-        paddingTop: '150px',
-        justifyContent: 'space-between',
-        textAlign: 'center',
+        backgroundColor: '#f5f5dc', // beige color
+        padding: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-    title: {   
-        color: '#000',
-        textAlign: 'center',
-        fontSize: '30px',
+    title: {
+        color: '#000', // black color
+        fontSize: 28,
         fontWeight: 'bold',
+        marginBottom: 20,
     },
-    inputs: {
-        gap: '10px'
+    inputContainer: {
+        width: '100%',
+        marginBottom: 20,
     },
     input: {
         height: 40,
-        margin: 12,
+        marginVertical: 10,
         borderWidth: 1,
-        padding: 10,
-        backgroundColor: '#bdf',
-        borderRadius: '10px'
+        borderColor: '#000', // black border
+        paddingHorizontal: 10,
+        backgroundColor: '#fff', // white background
+        borderRadius: 5,
     },
-    texto2: {   
-        fontSize: '20px',
+    registerText: {
+        fontSize: 16,
         fontWeight: 'bold',
-
-        color: "white",
+        color: '#000', // black color
         textAlign: 'center',
+        marginTop: 10,
     },
-    imgLocation: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    img: {
-        width: '100px',
-        height: '100px',
-    },
-    creditos: {
+    footerText: {
         textAlign: 'center',
-        color: '#105',
-        paddingTop: '100px'
-    }
+        color: '#000', // black color
+        marginTop: 30,
+        fontSize: 14,
+    },
 });
