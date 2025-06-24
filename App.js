@@ -11,6 +11,7 @@ import Home from './Screens/Home.js';
 import CadastroFilmes from './Screens/CadastroFilmes.js';
 import FilmesFavoritos from './Screens/FilmesFavoritos.js';
 
+
 function HomeTabs(){
   const BottomTab = createBottomTabNavigator();
 
@@ -40,13 +41,13 @@ function HomeTabs(){
           )
         }}
         />
-        <BottomTab.Screen name='CadastroFilmes' component={CadastroFilmes}
+{/*         <BottomTab.Screen name='CadastroFilmes' component={CadastroFilmes}
         options={{
           tabBarIcon:() => (
             <MaterialIcons name="CadastroFilmes" size={40} color="black" />
           )
         }}
-        />
+        /> */}
         <BottomTab.Screen name='FilmesFavoritos' component={FilmesFavoritos}
         options={{
           tabBarIcon:() => (
@@ -72,6 +73,7 @@ export default function App() {
     <Stack.Navigator>
     <Stack.Screen name='Login' component={Login}/>
     <Stack.Screen name='Cadastro' component={CadastroUsuario}/>
+    <Stack.Screen name='CadastroFilmesADM' component={CadastroFilmes}/>
     <Stack.Screen options={{headerShown:false}} name='HomeTab' component={HomeTabs}/>
     
 
