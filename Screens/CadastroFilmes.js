@@ -114,33 +114,71 @@ export default function CadastroFilmes({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'orange',
-        justifyContent: 'center',
+        backgroundColor: '#1c1c1c',
         padding: 20,
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        marginBottom: 20,
-        textAlign: 'center',
-    },
-    input: {
-        height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
-        marginBottom: 15,
-        paddingHorizontal: 10,
-    },
-    button: {
-        backgroundColor: '#ff8c00',
-        paddingVertical: 10,
-        borderRadius: 5,
+        justifyContent: 'center',
         alignItems: 'center',
     },
-    buttonText: {
-        color: 'white',
-        fontSize: 18,
-        fontWeight: 'bold',
+    logo: {
+        width: 140,
+        height: 140,
+        marginBottom: 20,
+        opacity: 0.85,
     },
-
+    title: {
+        color: '#fff',
+        fontSize: 28,
+        fontWeight: 'bold',
+        marginBottom: 25,
+        textAlign: 'center',
+    },
+    inputContainer: {
+        width: '100%',
+        marginBottom: 25,
+    },
+    input: {
+        height: 45,
+        borderWidth: 1,
+        borderColor: '#444',
+        backgroundColor: '#2c2c2c',
+        borderRadius: 8,
+        paddingHorizontal: 12,
+        marginBottom: 15,
+        fontSize: 16,
+        color: '#fff',
+    },
+    registerText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#ff8c00', // Laranja escuro para o texto do link
+        textAlign: 'center',
+        marginTop: 15,
+    },
+    footerText: {
+        textAlign: 'center',
+        color: '#888',
+        marginTop: 40,
+        fontSize: 14,
+        fontWeight: '600',
+        letterSpacing: 0.5,
+        textTransform: 'uppercase',
+    },
+    button: {
+        backgroundColor: '#ff8c00', // Botão laranja escuro
+        paddingVertical: 12,
+        paddingHorizontal: 25,
+        borderRadius: 8,
+        marginTop: 10,
+        shadowColor: '#ff8c00',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.4,
+        shadowRadius: 4,
+        elevation: 4,
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
 });
