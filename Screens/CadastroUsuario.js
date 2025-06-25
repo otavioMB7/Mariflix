@@ -97,24 +97,24 @@ export default function SignUp({ navigation }) {
         input: {
             height: 45,
             borderWidth: 1,
-            borderColor: '#444', // Cinza escuro para a borda
-            backgroundColor: '#2c2c2c', // Cinza chumbo no fundo do input
+            borderColor: '#444', 
+            backgroundColor: '#2c2c2c',
             borderRadius: 8,
             paddingHorizontal: 12,
             marginBottom: 15,
             fontSize: 16,
-            color: '#fff', // Texto branco nos inputs
+            color: '#fff', 
         },
         registerText: {
             fontSize: 16,
             fontWeight: 'bold',
-            color: '#c0392b', // Vermelho escuro
+            color: '#c0392b', 
             textAlign: 'center',
             marginTop: 15,
         },
         footerText: {
             textAlign: 'center',
-            color: '#888', // Cinza médio
+            color: '#888', 
             marginTop: 40,
             fontSize: 14,
             fontWeight: '600',
@@ -122,7 +122,7 @@ export default function SignUp({ navigation }) {
             textTransform: 'uppercase',
         },
         button: {
-            backgroundColor: '#c0392b', // Vermelho escuro
+            backgroundColor: '#c0392b', 
             paddingVertical: 12,
             paddingHorizontal: 25,
             borderRadius: 8,

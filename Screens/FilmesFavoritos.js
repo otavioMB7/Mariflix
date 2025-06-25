@@ -34,7 +34,7 @@ export default function FilmesFavoritos({nome,genero,imagem,ano,nota,ondeAssisti
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000', // fundo preto Netflix
+        backgroundColor: '#000', 
         padding: 20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 20,
         textAlign: 'center',
-        color: '#E50914', // vermelho Netflix
+        color: '#E50914',
         letterSpacing: 1,
     },
 

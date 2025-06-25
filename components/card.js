@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     card:{
         width: 170,
         minHeight: 280,
-        backgroundColor: '#181818', // cinza escuro Netflix
+        backgroundColor: '#181818', 
         borderRadius: 12,
         margin: 10,
         padding: 12,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         height: 160,
         borderRadius: 8,
         borderWidth: 2,
-        borderColor: '#E50914', // vermelho Netflix
+        borderColor: '#E50914', 
         marginBottom: 10,
         backgroundColor: '#333',
     },

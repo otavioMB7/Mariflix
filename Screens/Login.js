@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     registerText: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#e74c3c', // Vermelho vivo para links e textos de ação
+        color: '#e74c3c', 
         textAlign: 'center',
         marginTop: 15,
     },
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase',
     },
     button: {
-        backgroundColor: '#e74c3c', // Vermelho mais vibrante
+        backgroundColor: '#e74c3c', 
         paddingVertical: 12,
         paddingHorizontal: 25,
         borderRadius: 8,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.5,
         shadowRadius: 4,
-        elevation: 5, // Sombra no Android
+        elevation: 5, 
     },
     buttonText: {
         color: '#fff',

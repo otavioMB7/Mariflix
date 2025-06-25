@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     registerText: {
         fontSize: 16,
         fontWeight: 'bold',
-        color: '#ff8c00', // Laranja escuro para o texto do link
+        color: '#ff8c00', 
         textAlign: 'center',
         marginTop: 15,
     },
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase',
     },
     button: {
-        backgroundColor: '#ff8c00', // Botão laranja escuro
+        backgroundColor: '#ff8c00', 
         paddingVertical: 12,
         paddingHorizontal: 25,
         borderRadius: 8,
