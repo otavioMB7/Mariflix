@@ -10,53 +10,56 @@ import CadastroUsuario from './Screens/CadastroUsuario.js';
 import Home from './Screens/Home.js';
 import CadastroFilmes from './Screens/CadastroFilmes.js';
 import FilmesFavoritos from './Screens/FilmesFavoritos.js';
+import { FavoritosProvider } from './components/FavoritosProvider.js';
 
 
 function HomeTabs(){
   const BottomTab = createBottomTabNavigator();
 
   return(
-  <BottomTab.Navigator
-
-      screenOptions={{
-        tabBarActiveTintColor:"#841584",
-        tabBarActiveBackgroundColor:"#d6b6cb",
-        tabBarInactiveBackgroundColor:"#e6e1aa",
-        tabBarInactiveTintColor:"red",
-        headerStyle:{
-          backgroundColor:'#d6b6cb',
-        },
-        headerTintColor:"#841584",
-        //headerTitleAlign:'center',
-
-
-      }}
-      >
-
-   
-        <BottomTab.Screen name='Home' component={Home}
-        options={{
-          tabBarIcon:() => (
-            <MaterialIcons name="home" size={40} color="black" />
-          )
-        }}
-        />
-{/*         <BottomTab.Screen name='CadastroFilmes' component={CadastroFilmes}
-        options={{
-          tabBarIcon:() => (
-            <MaterialIcons name="CadastroFilmes" size={40} color="black" />
-          )
-        }}
-        /> */}
-        <BottomTab.Screen name='FilmesFavoritos' component={FilmesFavoritos}
-        options={{
-          tabBarIcon:() => (
-            <MaterialIcons name="FilmesFavoritos" size={40} color="black" />
-          )
-        }}
-        />     
-
-      </BottomTab.Navigator>
+<BottomTab.Navigator
+  screenOptions={{
+    tabBarActiveTintColor: "#E50914", // vermelho Netflix
+    tabBarInactiveTintColor: "#fff",
+    tabBarActiveBackgroundColor: "#181818", // cinza escuro
+    tabBarInactiveBackgroundColor: "#181818",
+    tabBarStyle: {
+      backgroundColor: "#181818",
+      borderTopColor: "#E50914",
+      borderTopWidth: 2,
+      height: 65,
+      paddingBottom: 8,
+      paddingTop: 8,
+    },
+    headerShown: false, // remove o header de cima
+    tabBarLabelStyle: {
+      fontWeight: 'bold',
+      fontSize: 14,
+      letterSpacing: 1,
+    },
+  }}
+>
+  <BottomTab.Screen
+    name='Home'
+    component={Home}
+    options={{
+      tabBarIcon: ({ color }) => (
+        <MaterialIcons name="home" size={32} color={color} />
+      ),
+      tabBarLabel: 'Início',
+    }}
+  />
+  <BottomTab.Screen
+    name='FilmesFavoritos'
+    component={FilmesFavoritos}
+    options={{
+      tabBarIcon: ({ color }) => (
+        <MaterialIcons name="favorite" size={32} color={color} />
+      ),
+      tabBarLabel: 'Favoritos',
+    }}
+  />
+</BottomTab.Navigator>
   )
 }
 
@@ -69,7 +72,8 @@ function HomeTabs(){
 export default function App() {
   const Stack= createStackNavigator();
   return (
-    <NavigationContainer>
+   <FavoritosProvider>
+   <NavigationContainer>
     <Stack.Navigator>
     <Stack.Screen name='Login' component={Login}/>
     <Stack.Screen name='Cadastro' component={CadastroUsuario}/>
@@ -79,6 +83,8 @@ export default function App() {
 
   </Stack.Navigator>
  </NavigationContainer>
+ </FavoritosProvider>
+
 
   );
 }

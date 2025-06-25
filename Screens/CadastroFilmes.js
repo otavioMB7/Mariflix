@@ -12,6 +12,8 @@ export default function CadastroFilmes({navigation}) {
     const [sinopse, setSinopse] = useState("");
     const [autor, setAutor] = useState("");
     const [ano, setAno] = useState("");
+    const [nota, setNota] = useState("");
+    const [ondeAssistir, setOndeAssistir] = useState("");
 
 
 
@@ -24,6 +26,8 @@ export default function CadastroFilmes({navigation}) {
                 sinopse,
                 autor,
                 ano: parseInt(ano),
+                nota: parseFloat(nota),
+                ondeAssistir,
             });
             setNome("");
             setGenero("");
@@ -31,6 +35,9 @@ export default function CadastroFilmes({navigation}) {
             setSinopse("");
             setAutor("");
             setAno("");
+            setNota("");
+            setOndeAssistir("");
+
             console.log("Produto cadastrado com sucesso!");
 
         } catch (error) {
@@ -82,18 +89,19 @@ export default function CadastroFilmes({navigation}) {
                 onChangeText={setAno}
                 keyboardType="numeric"
             />
-
-
-
-
-
-
-
-
-
-
-
-
+            <TextInput
+                style={styles.input}
+                placeholder="Nota"
+                value={nota}
+                onChangeText={setNota}
+                keyboardType="numeric"
+            />
+            <TextInput
+                style={styles.input}
+                placeholder="Onde Assistir"
+                value={ondeAssistir}
+                onChangeText={setOndeAssistir}
+            />
 
 
 
