@@ -38,7 +38,7 @@ export default function CadastroFilmes({navigation}) {
             setNota("");
             setOndeAssistir("");
 
-            console.log("Produto cadastrado com sucesso!");
+            console.log("Filme cadastrado com sucesso!");
 
         } catch (error) {
             console.error("Erro ao cadastrar produto: ", error);
@@ -51,7 +51,7 @@ export default function CadastroFilmes({navigation}) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Cadastro de Produto</Text>
+            <Text style={styles.title}>Cadastro do Filme</Text>
             <TextInput
                 style={styles.input}
                 placeholder="Nome do Filme"
