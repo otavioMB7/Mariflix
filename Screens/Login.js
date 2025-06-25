@@ -69,7 +69,7 @@ export default function Login({ navigation }) {
                 <Text style={styles.registerText}>Cadastre-se</Text>
             </TouchableOpacity>
 
-            <Text style={styles.footerText}>O palco das suas críticas cinematográficas</Text>
+            <Text style={styles.footerText}>O local ideal para encontrar seu filme!</Text>
         </View>
     );
 }

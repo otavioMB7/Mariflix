@@ -64,7 +64,7 @@ export default function SignUp({ navigation }) {
             title="Cadastrar"
             onPress={cadastroUser}
             />
-            <Text style={styles.footerText}>O palco das suas críticas cinematográficas</Text>
+            <Text style={styles.footerText}>O local ideal para encontrar seu filme!</Text>
         </View>
         );
     }
