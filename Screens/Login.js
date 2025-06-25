@@ -36,7 +36,7 @@ export default function Login({ navigation }) {
     return (
         <View style={styles.container}>
             <Image
-                source={require('../assets/marilogo.png')}
+                source={require('../assets/mari.jpg')}
                 style={styles.logo}
                 resizeMode="contain"
             />
