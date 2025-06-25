@@ -61,9 +61,6 @@ export default function Product({ navigation }) {
     carregarFilmes();
   }, [generoSelecionado, plataformaSelecionada, notaMinima, anoSelecionado]);
 
-  const generos = ['Todos', 'Ação', 'Comédia', 'Drama', 'Terror', 'Romance'];
-  const plataformas = ['Todos', 'Netflix', 'Prime Video', 'Disney+', 'MAX'];
-
   const limparFiltros = () => {
     setGeneroSelecionado('Todos');
     setPlataformaSelecionada('Todos');

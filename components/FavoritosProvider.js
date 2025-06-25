@@ -4,25 +4,25 @@ import {doc,setDoc,getDoc} from 'firebase/firestore';
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 
-const FavoritosContext = createContext();
+const FavoritosContext = createContext(); //Armazena os favoritos 
 
 export function FavoritosProvider({children}){
-    const [favoritos,setFavoritos] = useState([]);
-    const [usuario, setUsuario] = useState(null);
-    const [carregandoFavoritos, setCarregandoFavoritos] = useState(true);
+    const [favoritos,setFavoritos] = useState([]); //Filmes favoritos
+    const [usuario, setUsuario] = useState(null); //Usuário Logado
+    const [carregandoFavoritos, setCarregandoFavoritos] = useState(true); //Verificar usuário
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => { //Verificação e usar o unsubscribe
             setUsuario(user);
             setCarregandoFavoritos(true);
-            if(user){
+            if(user){ 
                 try{
-                    const docRef = doc(db, "favoritados", user.uid);
+                    const docRef = doc(db, "favoritados", user.uid); //puxa o firestore para tentar achar o documento
                     const docSnap = await getDoc(docRef);
                 
             
                 if(docSnap.exists()){
-                    const dados = docSnap.data();
+                    const dados = docSnap.data(); //Pega os dados 
                     setFavoritos(Array.isArray(dados.filmes) ? dados.filmes : []);
                 } 
                 else {
@@ -31,11 +31,11 @@ export function FavoritosProvider({children}){
             }
             catch(error){
                 console.log("Erro ao carregar favoritos:", error);
-                setFavoritos([]);
+                setFavoritos([]); //Atualiza os favoritos
             }
         }
         else {
-            setFavoritos([]);
+            setFavoritos([]); //Limpa a pasta
         }
         setCarregandoFavoritos(false);
         })
@@ -67,12 +67,12 @@ export function FavoritosProvider({children}){
         Array.isArray(anterior) ? [...anterior, filme] : [filme]
         );
     }
-     function removerFilme(index){
-        const novaLista = [];
+     function removerFilme(index){ // Pega o indice do filme
+        const novaLista = [];// Declaração da nova lista 
 
-        setFavoritos((estadoAnterior) => {
+        setFavoritos((estadoAnterior) => { // Pega a lista anterior como parâmetro
             for(let i = 0; i < estadoAnterior.length; i++){
-                if(i !== index){
+                if(i !== index){ //Comparação
                     novaLista.push(estadoAnterior[i]);
                 }
             }
